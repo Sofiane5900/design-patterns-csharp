@@ -2,8 +2,8 @@ namespace design_patterns.Singleton;
 
 public sealed class Singleton
 {
-    private static Singleton _instance = new();
-    public static Singleton Instance => _instance;
+    private static Lazy<Singleton> _instance = new(() => new Singleton());
+    public static Singleton Instance => _instance.Value;
 
     private Singleton() { }
 }
