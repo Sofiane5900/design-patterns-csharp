@@ -1,6 +1,9 @@
 namespace design_patterns.Singleton;
 
-public class MemoryCache
+public sealed class MemoryCache
 {
-    
+    private MemoryCache()
+    {
+        
+    }
 }
