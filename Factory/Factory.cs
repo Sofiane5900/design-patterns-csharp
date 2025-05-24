@@ -7,5 +7,8 @@ public abstract class Factory
 
 public class FactoryImplementation : Factory
 {
-    
+    public override void CreateProduct()
+    {
+       Console.WriteLine("Factory Pattern");
+    }
 }
