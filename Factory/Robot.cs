@@ -12,11 +12,11 @@ public class Robot
 
 public class RobotFactory
 {
-    public static Factory GetRobotNumber(string robotNumber)
+    public Factory GetRobotNumber(Robot robotNumber)
     {
-        if (robotNumber.StartsWith("1")) return new FactoryImplementationOne();
-        if (robotNumber.StartsWith("2")) return new FactoryImplementationTwo();
-        if (robotNumber.StartsWith("3")) return new FactoryImplementationThree();
+        if (robotNumber.RobotNumber.StartsWith("1")) return new FactoryImplementationOne();
+        if (robotNumber.RobotNumber.StartsWith("2")) return new FactoryImplementationTwo();
+        if (robotNumber.RobotNumber.StartsWith("3")) return new FactoryImplementationThree();
 
         throw new InvalidOperationException("Invalid robot number prefix.");
     }
