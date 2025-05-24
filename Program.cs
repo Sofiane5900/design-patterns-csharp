@@ -11,12 +11,12 @@ Console.WriteLine(ReferenceEquals(instance1,instance2));
 
 
 // Factory
-Robot robotOne = new Robot("1");
-Robot robotTwo = new Robot("2");
-Robot robotThree = new Robot("3");
+Robot robotFactoryOne = new Robot("1");
+Robot robotFactoryTwo = new Robot("2");
+Robot robotFactoryThree = new Robot("3");
 
 var robotFactory = new RobotFactory();
 
-robotFactory.GetRobotNumber(robotOne).CreateProduct();
-robotFactory.GetRobotNumber(robotTwo).CreateProduct();
-robotFactory.GetRobotNumber(robotThree).CreateProduct();
+robotFactory.GetRobotNumber(robotFactoryOne).CreateProduct();
+robotFactory.GetRobotNumber(robotFactoryTwo).CreateProduct();
+robotFactory.GetRobotNumber(robotFactoryThree).CreateProduct();

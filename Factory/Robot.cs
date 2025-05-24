@@ -1,23 +1,30 @@
 namespace design_patterns.Factory;
 
-public class Robot
+public abstract class RobotBuilder
 {
-    public string RobotNumber { get; set; }
+    public abstract void CreateProduct();
+}
 
-    public Robot(string robotNumber)
+public class TypeOneRobot : RobotBuilder
+{
+    public override void CreateProduct()
     {
-        RobotNumber = robotNumber;
+        Console.WriteLine("Fabricating a type one robot... Created !");
     }
 }
 
-public class RobotFactory
+public class TypeTwoRobot : RobotBuilder
 {
-    public Factory GetRobotNumber(Robot robotNumber)
+    public override void CreateProduct()
     {
-        if (robotNumber.RobotNumber.StartsWith("1")) return new FactoryImplementationOne();
-        if (robotNumber.RobotNumber.StartsWith("2")) return new FactoryImplementationTwo();
-        if (robotNumber.RobotNumber.StartsWith("3")) return new FactoryImplementationThree();
+        Console.WriteLine("Fabricating a type two robot... Created !");
+    }
+}
 
-        throw new InvalidOperationException("Invalid robot number prefix.");
+public class TypeThreeRobot : RobotBuilder
+{
+    public override void CreateProduct()
+    {
+        Console.WriteLine("Fabricating a type three robot... Created !");
     }
 }
