@@ -12,7 +12,7 @@ public class Robot
 
 public class RobotFactory
 {
-    public static Factory CreateFactory(string robotNumber)
+    public static Factory GetRobotNumber(string robotNumber)
     {
         if (robotNumber.StartsWith("1")) return new FactoryImplementationOne();
         if (robotNumber.StartsWith("2")) return new FactoryImplementationTwo();
