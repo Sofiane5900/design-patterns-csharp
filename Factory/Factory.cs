@@ -20,7 +20,7 @@ public class FactoryImplementationTwo : Factory
         Console.WriteLine("2");
     }
 }
-
+ 
 public class FactoryImplementationThree : Factory
 {
     public override void CreateProduct()
