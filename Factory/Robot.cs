@@ -4,6 +4,10 @@ public class Robot
 {
     public string RobotNumber { get; set; }
 
+    public Robot(string robotNumber)
+    {
+        RobotNumber = robotNumber;
+    }
     public Factory GetRobotNumber(Robot r)
     {
         if (RobotNumber.StartsWith("1")) return new FactoryImplementationOne();
