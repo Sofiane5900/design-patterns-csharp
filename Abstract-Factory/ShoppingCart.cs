@@ -12,7 +12,7 @@ public class ShoppingCart
     {
         this.factory = factory;
     }
-    public void CreateCommand(IVipShoppingFactory factory)
+    public void CreateCommand()
     {
         var priority = factory.GetPriorite().Priority;
         var percentage = factory.GetReduction().Percentage;
