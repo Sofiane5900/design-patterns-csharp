@@ -1,6 +1,9 @@
 namespace design_patterns.Abstract_Factory;
 
-public interface IVipShoppingFactory
+public interface IPriorityCommand
 {
     
+}
+public interface IVipShoppingFactory
+{
 }
