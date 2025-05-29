@@ -7,8 +7,13 @@ public class Customer
 }
 public class ShoppingCart
 {
-    public void CreateCommand()
+    public void CreateCommand(IVipShoppingFactory factory)
     {
+        var priority = factory.GetPriorite().Priority;
+        var percentage = factory.GetReduction().Purcentage;
         
+        Console.WriteLine("Priority Client = " + priority);
+        Console.WriteLine("Purcentage = " + percentage);
+
     }
 }

@@ -4,9 +4,9 @@ public interface IPriorityCommand
 {
     int Priority { get;}
 }
-public interface IPurcentReduction
+public interface IPercentReduction
 {
-    decimal Purcentage { get; }
+    decimal Percentage { get; }
 }
 
 public class StandardPriorityCommand : IPriorityCommand
@@ -19,18 +19,18 @@ public class VipPriorityCommand : IPriorityCommand
     public int Priority => 1;
 }
 
-public class StandardPurcentReduction : IPurcentReduction
+public class StandardPercentReduction : IPercentReduction
 {
-    public decimal Purcentage => 0m;
+    public decimal Percentage => 0m;
 }
 
-public class VipPurcentReduction : IPurcentReduction
+public class VipPercentReduction : IPercentReduction
 {
-    public decimal Purcentage => 15m;
+    public decimal Percentage => 15m;
 }
 public interface IVipShoppingFactory
 {
-    IPurcentReduction GetReduction();
+    IPercentReduction GetReduction();
     IPriorityCommand GetPriorite();
 }
 
@@ -38,12 +38,12 @@ public class VipShoppingFactory : IVipShoppingFactory
 {
     public IPriorityCommand GetPriorite() => new VipPriorityCommand();
 
-    public IPurcentReduction GetReduction() => new VipPurcentReduction();
+    public IPercentReduction GetReduction() => new VipPercentReduction();
 }
 
 public class StandardShoppingFactory : IVipShoppingFactory
 {
     public IPriorityCommand GetPriorite() => new StandardPriorityCommand();
 
-    public IPurcentReduction GetReduction() => new StandardPurcentReduction();
+    public IPercentReduction GetReduction() => new StandardPercentReduction();
 }
