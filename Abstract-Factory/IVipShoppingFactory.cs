@@ -33,3 +33,16 @@ public interface IVipShoppingFactory
     IPurcentReduction GetReduction();
     IPriorityCommand GetPriorite();
 }
+
+public class VipShoppingFactory : IVipShoppingFactory
+{
+    public IPriorityCommand GetPriorite()
+    {
+        throw new NotImplementedException();
+    }
+
+    public IPurcentReduction GetReduction()
+    {
+        throw new NotImplementedException();
+    }
+}
