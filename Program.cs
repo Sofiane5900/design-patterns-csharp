@@ -25,3 +25,13 @@ robotFactory.GetRobotNumber(robotFactoryThree).CreateProduct();
 // Abstract Factory
 var customer = new Customer();
 var customerVip = new Customer { Orders = new int[10] };
+
+IVipShoppingFactory factoryOne = GetFactory(customer);
+IVipShoppingFactory factoryTwo = GetFactory(customerVip);
+
+
+IVipShoppingFactory GetFactory(Customer customer)
+{
+    if (customer.Orders.Length > 5) return new VipShoppingFactory();
+    return new StandardShoppingFactory();
+}
