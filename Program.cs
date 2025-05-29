@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
+using design_patterns.Abstract_Factory;
 using design_patterns.Factory;
 using design_patterns.Singleton;
 
@@ -20,3 +21,7 @@ var robotFactory = new RobotFactory();
 robotFactory.GetRobotNumber(robotFactoryOne).CreateProduct();
 robotFactory.GetRobotNumber(robotFactoryTwo).CreateProduct();
 robotFactory.GetRobotNumber(robotFactoryThree).CreateProduct();
+
+// Abstract Factory
+var customer = new Customer();
+var customerVip = new Customer { Orders = new int[10] };
