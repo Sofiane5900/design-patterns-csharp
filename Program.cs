@@ -29,6 +29,13 @@ var customerVip = new Customer { Orders = new int[10] };
 IVipShoppingFactory factoryOne = GetFactory(customer);
 IVipShoppingFactory factoryTwo = GetFactory(customerVip);
 
+var shoppingCartOne = new ShoppingCart(factoryOne);
+var shoppingCartTwo = new ShoppingCart(factoryTwo);
+Console.WriteLine("Shopping Cart 1 ");
+shoppingCartOne.CreateCommand();
+Console.WriteLine("Shopping Cart 2 ");
+shoppingCartTwo.CreateCommand();
+
 
 IVipShoppingFactory GetFactory(Customer customer)
 {
