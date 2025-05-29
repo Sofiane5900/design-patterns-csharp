@@ -19,7 +19,15 @@ public class VipPriorityCommand : IPriorityCommand
     public int Priority => 1;
 }
 
+public class StandardPurcentReduction : IPurcentReduction
+{
+    public decimal Purcentage => 0m;
+}
 
+public class VipPurcentReduction : IPurcentReduction
+{
+    public decimal Purcentage => 15m;
+}
 public interface IVipShoppingFactory
 {
     
