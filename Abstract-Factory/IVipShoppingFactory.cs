@@ -30,5 +30,6 @@ public class VipPurcentReduction : IPurcentReduction
 }
 public interface IVipShoppingFactory
 {
-    
+    IPurcentReduction GetReduction();
+    IPriorityCommand GetPriorite();
 }
