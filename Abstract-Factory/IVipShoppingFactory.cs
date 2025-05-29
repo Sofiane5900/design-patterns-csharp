@@ -36,13 +36,14 @@ public interface IVipShoppingFactory
 
 public class VipShoppingFactory : IVipShoppingFactory
 {
-    public IPriorityCommand GetPriorite()
-    {
-        throw new NotImplementedException();
-    }
+    public IPriorityCommand GetPriorite() => new VipPriorityCommand();
 
-    public IPurcentReduction GetReduction()
-    {
-        throw new NotImplementedException();
-    }
+    public IPurcentReduction GetReduction() => new VipPurcentReduction();
+}
+
+public class StandardShoppingFactory : IVipShoppingFactory
+{
+    public IPriorityCommand GetPriorite() => new StandardPriorityCommand();
+
+    public IPurcentReduction GetReduction() => new StandardPurcentReduction();
 }
