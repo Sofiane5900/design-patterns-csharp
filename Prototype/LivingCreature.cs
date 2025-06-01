@@ -17,3 +17,16 @@ public class Dog : LivingCreature
         throw new NotImplementedException();
     }
 }
+
+public class Person : LivingCreature
+{
+    public Person(string name)
+    {
+        Name = name;
+    }
+
+    public override LivingCreature Clone()
+    {
+        throw new NotImplementedException();
+    }
+}
