@@ -5,3 +5,11 @@ public abstract class LivingCreature
     public string Name { get; set; } = "";
     public abstract LivingCreature Clone();
 }
+
+public class Dog : LivingCreature
+{
+    public override LivingCreature Clone()
+    {
+        throw new NotImplementedException();
+    }
+}
