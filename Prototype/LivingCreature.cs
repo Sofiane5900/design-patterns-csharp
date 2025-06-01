@@ -17,9 +17,15 @@ public class Dog : LivingCreature
     }
 
 
-    public override LivingCreature Clone(bool deepclone = false)
+    public override LivingCreature Clone(bool deepClone = false)
     {
-        throw new NotImplementedException();
+        if (deepClone)
+        {
+            var dog = (Dog)MemberwiseClone();
+            dog.Owner = (Person)Owner.Clone(true);
+            return dog;
+        }
+        return (LivingCreature)MemberwiseClone();
     }
 }
 
