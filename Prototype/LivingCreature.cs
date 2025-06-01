@@ -8,10 +8,15 @@ public abstract class LivingCreature
 
 public class Dog : LivingCreature
 {
-    public Dog(string name)
+    public Person Owner { get; set; } 
+
+    public Dog(string name, Person owner)
     {
         Name = name;
+        Owner = owner;
     }
+
+
     public override LivingCreature Clone()
     {
         throw new NotImplementedException();
