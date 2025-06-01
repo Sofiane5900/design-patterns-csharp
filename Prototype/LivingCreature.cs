@@ -1,6 +1,6 @@
 namespace design_patterns.Prototype;
 
-public class LivingCreature
+public abstract class LivingCreature
 {
-    
+    public string Name { get; set; } = "";
 }
