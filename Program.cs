@@ -53,7 +53,7 @@ var dog = new Dog("Pluto", person);
 Console.WriteLine("Name dog 1 = " + dog.Name);
 Console.WriteLine("Name owner dog 1 = " + dog.Owner.Name);
 
-var dogClone = (Dog)dog.Clone();
+var dogClone = (Dog)dog.Clone(true);
 person.Name = "Sufyan";
 Console.WriteLine("Name cloned dog = " + dogClone.Name);
 Console.WriteLine("Name owner cloned dog  = " + dogClone.Owner.Name);
