@@ -8,6 +8,10 @@ public abstract class LivingCreature
 
 public class Dog : LivingCreature
 {
+    public Dog(string name)
+    {
+        Name = name;
+    }
     public override LivingCreature Clone()
     {
         throw new NotImplementedException();
