@@ -3,6 +3,7 @@
 
 using design_patterns.Abstract_Factory;
 using design_patterns.Factory;
+using design_patterns.Prototype;
 using design_patterns.Singleton;
 
 // Singleton
@@ -42,3 +43,17 @@ IVipShoppingFactory GetFactory(Customer customer)
     if (customer.Orders.Length > 5) return new VipShoppingFactory();
     return new StandardShoppingFactory();
 }
+
+
+// Prototype
+var person = new Person("Sofiane");
+Console.WriteLine("Name person 1 = " + person.Name);
+
+var dog = new Dog("Pluto", person);
+Console.WriteLine("Name dog 1 = " + dog.Name);
+Console.WriteLine("Name owner dog 1 = " + dog.Owner.Name);
+
+var dogClone = (Dog)dog.Clone();
+person.Name = "Sufyan";
+Console.WriteLine("Name cloned dog = " + dogClone.Name);
+Console.WriteLine("Name owner cloned dog  = " + dogClone.Owner.Name);

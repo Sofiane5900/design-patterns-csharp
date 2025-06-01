@@ -32,6 +32,6 @@ public class Person : LivingCreature
 
     public override LivingCreature Clone()
     {
-        throw new NotImplementedException();
+        return (LivingCreature)MemberwiseClone();
     }
 }
