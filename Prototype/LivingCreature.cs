@@ -3,7 +3,7 @@ namespace design_patterns.Prototype;
 public abstract class LivingCreature
 {
     public string Name { get; set; } = "";
-    public abstract LivingCreature Clone();
+    public abstract LivingCreature Clone(bool deepclone);
 }
 
 public class Dog : LivingCreature
@@ -17,7 +17,7 @@ public class Dog : LivingCreature
     }
 
 
-    public override LivingCreature Clone()
+    public override LivingCreature Clone(bool deepclone = false)
     {
         throw new NotImplementedException();
     }
@@ -30,7 +30,7 @@ public class Person : LivingCreature
         Name = name;
     }
 
-    public override LivingCreature Clone()
+    public override LivingCreature Clone(bool deepClone = false)
     {
         return (LivingCreature)MemberwiseClone();
     }
