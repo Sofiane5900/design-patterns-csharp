@@ -8,7 +8,7 @@ public abstract class LivingCreature
 
 public class Dog : LivingCreature
 {
-    public Person Owner { get; private set; } 
+    public Person Owner { get; set; } 
 
     public Dog(string name, Person owner)
     {
