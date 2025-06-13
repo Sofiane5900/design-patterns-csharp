@@ -77,4 +77,9 @@ public class Pizza
             Pizza.AddIngrendients("Anchovy");
         }
     }
+
+    public class SaleTerminal
+    {
+        
+    }
 }
