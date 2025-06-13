@@ -41,6 +41,16 @@ public class Pizza
         {
             
         }
+
+        public override void AddBase()
+        {
+            Pizza.AddIngrendients("Tomato sauce");
+        }
+
+        public override void AddIngredient()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }
