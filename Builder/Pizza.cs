@@ -8,6 +8,7 @@ public class Pizza
     public Pizza(string name)
     {
         Name = name;
+        Ingredients = new List<string>();
     }
 
     public void AddIngrendients(string ingredient)
