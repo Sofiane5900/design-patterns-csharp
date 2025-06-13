@@ -80,6 +80,10 @@ public class Pizza
 
     public class SaleTerminal
     {
-        
+        public void PreparePizza(PizzaBuilder builder)
+        {
+            builder.AddBase();
+            builder.AddIngredient();
+        }
     }
 }
