@@ -55,4 +55,26 @@ public class Pizza
         }
     }
 
+    public class NapoletanaBuilder : PizzaBuilder
+    {
+        public NapoletanaBuilder()
+            :base("NapoletanaBuilder")
+        {
+            
+        }
+
+        public override void AddBase()
+        {
+            Pizza.AddIngrendients("Tomato sauce");
+        }
+
+        public override void AddIngredient()
+        {
+            Pizza.AddIngrendients("Mozzarella");
+            Pizza.AddIngrendients("Basilic");
+            Pizza.AddIngrendients("Origan");
+            Pizza.AddIngrendients("Garlic");
+            Pizza.AddIngrendients("Anchovy");
+        }
+    }
 }
