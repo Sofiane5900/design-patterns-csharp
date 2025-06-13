@@ -14,4 +14,9 @@ public class Pizza
     {
         Ingredients.Add(ingredient);
     }
+
+    public override string ToString()
+    {
+        return $"Pizza {Name}, ingredients : {string.Join(",", Ingredients)}";
+    }
 }
