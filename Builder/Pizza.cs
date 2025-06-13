@@ -49,7 +49,9 @@ public class Pizza
 
         public override void AddIngredient()
         {
-            throw new NotImplementedException();
+            Pizza.AddIngrendients("Mozzarella");
+            Pizza.AddIngrendients("Basilic");
+
         }
     }
 
