@@ -7,6 +7,11 @@ public class Pizza
 
     public Pizza(string name)
     {
-        
+        Name = name;
+    }
+
+    public void AddIngrendients(string ingredient)
+    {
+        Ingredients.Add(ingredient);
     }
 }
