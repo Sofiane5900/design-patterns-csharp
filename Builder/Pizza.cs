@@ -20,4 +20,11 @@ public class Pizza
     {
         return $"Pizza {Name}, ingredients : {string.Join(",", Ingredients)}";
     }
+    
+    public abstract class  PizzaBuilder
+    {
+        
+    }
+
+    der
 }
