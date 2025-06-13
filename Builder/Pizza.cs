@@ -36,7 +36,11 @@ public class Pizza
 
     public class MargheritaBuilder : PizzaBuilder
     {
-        public MargheritaBuilder
+        public MargheritaBuilder()
+            :base(" Margherita")
+        {
+            
+        }
     }
 
 }
