@@ -24,7 +24,13 @@ public class Pizza
     public abstract class  PizzaBuilder
     {
         public Pizza Pizza { get; private set; }
+
+        public PizzaBuilder(string name)
+        {
+            Pizza = new Pizza(name);
+        }
+
+        public abstract void AddIngredient();
     }
 
-    der
 }
