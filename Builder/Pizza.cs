@@ -31,6 +31,7 @@ public class Pizza
         }
 
         public abstract void AddIngredient();
+        public abstract void AddBase();
     }
 
 }
