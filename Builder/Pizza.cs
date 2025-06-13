@@ -21,69 +21,69 @@ public class Pizza
         return $"Pizza {Name}, ingredients : {string.Join(",", Ingredients)}";
     }
     
-    public abstract class  PizzaBuilder
+    
+}
+
+public abstract class  PizzaBuilder
+{
+    public Pizza Pizza { get; private set; }
+
+    public PizzaBuilder(string name)
     {
-        public Pizza Pizza { get; private set; }
-
-        public PizzaBuilder(string name)
-        {
-            Pizza = new Pizza(name);
-        }
-
-        public abstract void AddIngredient();
-        public abstract void AddBase();
+        Pizza = new Pizza(name);
     }
 
-    public class MargheritaBuilder : PizzaBuilder
+    public abstract void AddIngredient();
+    public abstract void AddBase();
+}
+
+public class MargheritaBuilder : PizzaBuilder
+{
+    public MargheritaBuilder()
+        :base(" Margherita")
     {
-        public MargheritaBuilder()
-            :base(" Margherita")
-        {
             
-        }
-
-        public override void AddBase()
-        {
-            Pizza.AddIngrendients("Tomato sauce");
-        }
-
-        public override void AddIngredient()
-        {
-            Pizza.AddIngrendients("Mozzarella");
-            Pizza.AddIngrendients("Basilic");
-
-        }
     }
 
-    public class NapoletanaBuilder : PizzaBuilder
+    public override void AddBase()
     {
-        public NapoletanaBuilder()
-            :base("NapoletanaBuilder")
-        {
+        Pizza.AddIngrendients("Tomato sauce");
+    }
+
+    public override void AddIngredient()
+    {
+        Pizza.AddIngrendients("Mozzarella");
+        Pizza.AddIngrendients("Basilic");
+
+    }
+}
+public class NapoletanaBuilder : PizzaBuilder
+{
+    public NapoletanaBuilder()
+        :base("NapoletanaBuilder")
+    {
             
-        }
-
-        public override void AddBase()
-        {
-            Pizza.AddIngrendients("Tomato sauce");
-        }
-
-        public override void AddIngredient()
-        {
-            Pizza.AddIngrendients("Mozzarella");
-            Pizza.AddIngrendients("Basilic");
-            Pizza.AddIngrendients("Origan");
-            Pizza.AddIngrendients("Garlic");
-            Pizza.AddIngrendients("Anchovy");
-        }
     }
 
-    public class SaleTerminal
+    public override void AddBase()
     {
-        public void PreparePizza(PizzaBuilder builder)
-        {
-            builder.AddBase();
-            builder.AddIngredient();
-        }
+        Pizza.AddIngrendients("Tomato sauce");
     }
+
+    public override void AddIngredient()
+    {
+        Pizza.AddIngrendients("Mozzarella");
+        Pizza.AddIngrendients("Basilic");
+        Pizza.AddIngrendients("Origan");
+        Pizza.AddIngrendients("Garlic");
+        Pizza.AddIngrendients("Anchovy");
+    }
+}
+public class SaleTerminal
+{
+    public void PreparePizza(PizzaBuilder builder)
+    {
+        builder.AddBase();
+        builder.AddIngredient();
+    }   
 }
