@@ -23,7 +23,7 @@ public class Pizza
     
     public abstract class  PizzaBuilder
     {
-        
+        public Pizza Pizza { get; private set; }
     }
 
     der
