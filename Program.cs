@@ -66,3 +66,7 @@ var saleTerminal = new SaleTerminal();
 var margherita = new MargheritaBuilder();
 saleTerminal.PreparePizza(margherita);
 Console.WriteLine(margherita.Pizza);
+
+var napoletana = new NapoletanaBuilder();
+saleTerminal.PreparePizza(napoletana);
+Console.WriteLine(margherita.Pizza);
