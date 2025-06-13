@@ -34,4 +34,9 @@ public class Pizza
         public abstract void AddBase();
     }
 
+    public class MargheritaBuilder : PizzaBuilder
+    {
+        public MargheritaBuilder
+    }
+
 }
