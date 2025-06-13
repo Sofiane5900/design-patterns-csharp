@@ -15,6 +15,7 @@ public class Dog : LivingCreature
         Name = name;
         Owner = owner;
     }
+    
 
 
     public override LivingCreature Clone(bool deepClone = false)
