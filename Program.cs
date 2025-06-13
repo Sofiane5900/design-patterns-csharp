@@ -2,6 +2,7 @@
 
 
 using design_patterns.Abstract_Factory;
+using design_patterns.Builder;
 using design_patterns.Factory;
 using design_patterns.Prototype;
 using design_patterns.Singleton;
@@ -57,3 +58,11 @@ var dogClone = (Dog)dog.Clone(true);
 person.Name = "Sufyan";
 Console.WriteLine("Name cloned dog = " + dogClone.Name);
 Console.WriteLine("Name owner cloned dog  = " + dogClone.Owner.Name);
+
+// Builder
+var saleTerminal = new SaleTerminal();
+
+
+var margherita = new MargheritaBuilder();
+saleTerminal.PreparePizza(margherita);
+Console.WriteLine(margherita.Pizza);
